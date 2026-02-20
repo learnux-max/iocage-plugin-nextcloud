@@ -13,7 +13,7 @@ generate_self_signed_tls_certificates
 
 # Enable the necessary services
 sysrc -f /etc/rc.conf nginx_enable="YES"
-sysrc -f /etc/rc.conf mysql-server_enable="YES"
+sysrc -f /etc/rc.conf mysql_enable="YES"
 sysrc -f /etc/rc.conf php_fpm_enable="YES"
 sysrc -f /etc/rc.conf redis_enable="YES"
 sysrc -f /etc/rc.conf fail2ban_enable="YES"
