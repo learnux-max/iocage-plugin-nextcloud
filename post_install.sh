@@ -21,7 +21,7 @@ sysrc -f /etc/rc.conf fail2ban_enable="YES"
 # Start the service
 service nginx start 2>/dev/null
 service php_fpm start 2>/dev/null
-
+service mysql-server start 2>/dev/null
 service redis start 2>/dev/null
 
 # https://docs.nextcloud.com/server/13/admin_manual/installation/installation_wizard.html do not use the same name for user and db
@@ -48,8 +48,6 @@ GRANT ALL PRIVILEGES ON *.* TO '${USER}'@'localhost' WITH GRANT OPTION;
 GRANT ALL PRIVILEGES ON ${DB}.* TO '${USER}'@'localhost';
 FLUSH PRIVILEGES;
 EOF
-
-service mysql-server start 2>/dev/null
 
 # Make the default log directory
 mkdir /var/log/zm
