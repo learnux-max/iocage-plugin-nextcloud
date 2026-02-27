@@ -42,8 +42,8 @@ NCPASS=$(cat /root/ncpassword)
 # Configure mysql
 mysqladmin -u root password "${PASS}"
 mysql -u root -p"${PASS}" --connect-expired-password <<-EOF
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '${PASS}';
-CREATE USER '${USER}'@'localhost' IDENTIFIED WITH mysql_native_password BY '${PASS}';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY '${PASS}';
+CREATE USER '${USER}'@'localhost' IDENTIFIED WITH caching_sha2_password BY '${PASS}';
 GRANT ALL PRIVILEGES ON *.* TO '${USER}'@'localhost' WITH GRANT OPTION;
 GRANT ALL PRIVILEGES ON ${DB}.* TO '${USER}'@'localhost';
 FLUSH PRIVILEGES;
