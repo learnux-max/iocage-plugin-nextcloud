@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -eux
+set -x
 
 . load_env
 
