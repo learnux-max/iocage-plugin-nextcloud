@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -ux
+set -x
 
 # Load environment variable from /etc/iocage-env
 . load_env
