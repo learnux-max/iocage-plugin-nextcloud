@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -x
+set -eu
 
 if [ -e "/root/jail_options.env" ]
 then
