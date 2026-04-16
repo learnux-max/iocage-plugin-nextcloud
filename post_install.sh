@@ -40,6 +40,7 @@ PASS=$(cat /root/dbpassword)
 NCPASS=$(cat /root/ncpassword)
 
 # Configure mysql
+mysqladmin -u root password "${PASS}"
 mysql -u root -p"${PASS}" --connect-expired-password <<-EOF
 ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY '${PASS}';
 CREATE USER '${USER}'@'localhost' IDENTIFIED WITH caching_sha2_password BY '${PASS}';
