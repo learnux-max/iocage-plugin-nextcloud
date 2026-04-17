@@ -69,12 +69,12 @@ su -m www -c "php /usr/local/www/nextcloud/occ background:cron"
 
 su -m www -c "php /usr/local/www/nextcloud/occ config:system:set trusted_domains 1 --value='${IOCAGE_HOST_ADDRESS}'"
 
-su -m www -c "php /usr/local/www/nextcloud/occ app:install contacts"
-su -m www -c "php /usr/local/www/nextcloud/occ app:install calendar"
-su -m www -c "php /usr/local/www/nextcloud/occ app:install notes"
-su -m www -c "php /usr/local/www/nextcloud/occ app:install deck"
-su -m www -c "php /usr/local/www/nextcloud/occ app:install spreed"
-su -m www -c "php /usr/local/www/nextcloud/occ app:install mail"
+#su -m www -c "php /usr/local/www/nextcloud/occ app:install contacts"
+#su -m www -c "php /usr/local/www/nextcloud/occ app:install calendar"
+#su -m www -c "php /usr/local/www/nextcloud/occ app:install notes"
+#su -m www -c "php /usr/local/www/nextcloud/occ app:install deck"
+#su -m www -c "php /usr/local/www/nextcloud/occ app:install spreed"
+#su -m www -c "php /usr/local/www/nextcloud/occ app:install mail"
 
 # create sessions tmp dir outside nextcloud installation
 mkdir -p /usr/local/www/nextcloud-sessions-tmp >/dev/null 2>/dev/null
