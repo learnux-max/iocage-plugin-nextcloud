@@ -69,9 +69,9 @@ su -m www -c "php /usr/local/www/nextcloud/occ background:cron"
 
 su -m www -c "php /usr/local/www/nextcloud/occ config:system:set trusted_domains 1 --value='${IOCAGE_HOST_ADDRESS}'"
 
-#su -m www -c "php /usr/local/www/nextcloud/occ config:system:set maintenance_window_start --type=integer --value=1"
+su -m www -c "php /usr/local/www/nextcloud/occ config:system:set maintenance_window_start --type=integer --value=1"
 
-#su -m www -c "php /usr/local/www/nextcloud/occ maintenance:repair --include-expensive"
+su -m www -c "php /usr/local/www/nextcloud/occ maintenance:repair --include-expensive"
 
 #su -m www -c "php /usr/local/www/nextcloud/occ app:install contacts"
 #su -m www -c "php /usr/local/www/nextcloud/occ app:install calendar"
